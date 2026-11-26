@@ -27,7 +27,7 @@ android {
     signingConfigs {
         create("release") {
             val props = Properties()
-            rootProject.file("local.properties").inputStream().use { props.load(it) }
+            rootProject.file("local.properties").takeIf { it.exists() }?.inputStream()?.use { props.load(it) }
             storeFile = file(props.getProperty("RELEASE_STORE_FILE", "../deskdrop-release.keystore"))
             storePassword = props.getProperty("RELEASE_STORE_PASSWORD", "")
             keyAlias = props.getProperty("RELEASE_KEY_ALIAS", "deskdrop")
