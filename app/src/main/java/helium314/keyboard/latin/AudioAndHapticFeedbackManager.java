@@ -68,7 +68,7 @@ public final class AudioAndHapticFeedbackManager {
         if (mVibrator == null || milliseconds <= 0) {
             return;
         }
-        mVibrator.vibrate(milliseconds);
+        if ... else ...
     }
 
     private boolean reevaluateIfSoundIsOn() {
