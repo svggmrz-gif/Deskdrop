@@ -353,6 +353,7 @@ object AiServiceSync {
 
     @JvmField
     val CLOUD_MODELS: List<Pair<String, String>> = listOf(
+        "Gemini 3.8 Flash" to "gemini:gemini-3.8-flash",
         "Gemini 2.5 Flash" to "gemini:gemini-2.5-flash",
         "Claude Sonnet 4.5 (Anthropic)" to "anthropic:claude-sonnet-4-5",
         "Claude Opus 4.1 (Anthropic)" to "anthropic:claude-opus-4-1",
